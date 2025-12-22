@@ -1,0 +1,4 @@
+ALTER TABLE ETUDIANT DROP COLUMN EMAIL;
+
+-- Vérification
+DESC Etudiant;

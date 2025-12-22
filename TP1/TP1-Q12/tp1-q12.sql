@@ -1,0 +1,5 @@
+-- DateNaissance < DateRecrutement pour Enseignant
+ALTER TABLE ENSEIGNANT
+	ADD CONSTRAINT CHK_DATES CHECK (
+		DATENAISS < DATERECRUTEMENT
+    );

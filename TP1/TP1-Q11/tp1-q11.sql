@@ -1,0 +1,13 @@
+-- Exemple : ajouter MatriculeEns dans Module
+ALTER TABLE MODULE
+    ADD MATRICULEENS VARCHAR2(
+        15
+    );
+
+ALTER TABLE MODULE
+    ADD CONSTRAINT FK_MOD_ENS FOREIGN KEY (
+        MATRICULEENS
+    )
+        REFERENCES ENSEIGNANT(
+            MATRICULEENS
+        );

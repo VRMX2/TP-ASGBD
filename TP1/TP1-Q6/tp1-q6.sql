@@ -1,0 +1,4 @@
+ALTER TABLE ETUDIANT
+    ADD EMAIL VARCHAR2(
+        50
+    );
