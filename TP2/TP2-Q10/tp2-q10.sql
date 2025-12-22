@@ -18,5 +18,15 @@ WHERE
 
 
 
-	ALTER TABLE Enseignant ADD CONSTRAINT chk_dates
-CHECK (DateNaiss < DateRecrutement);
+-- En tant que DBA
+CONNECT SYSTEM/12345678;
+
+
+
+ALTER TABLE SECTION
+    ADD CONSTRAINT FK_SEC_SPEC22 FOREIGN KEY (
+        CODE_SPEC
+	)
+        REFERENCES SPECIALITE(
+            CODE_SPEC
+        );
